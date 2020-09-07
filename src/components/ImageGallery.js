@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import React, {useState, useEffect, useCallback} from 'react';
 import {
   SafeAreaView,
@@ -15,6 +16,7 @@ import * as Constant from '../constants';
 import styles from './styles';
 
 const ImageGallery = () => {
+  const [isRefresh, setisReferesh] = useState(false);
   const [page, setPage] = useState(1);
   const [isNetworkError, setisNetworkError] = useState(false);
   const loading = useSelector((state) => state.imageData.loading);
@@ -28,6 +30,7 @@ const ImageGallery = () => {
           const {isConnected} = state;
           if (isConnected) {
             setisNetworkError(false);
+            setisReferesh(false);
             dispatch(Action(Constant.IMAGE_REQUEST_LOADING));
             axios
               .get(URL(page))
@@ -51,9 +54,10 @@ const ImageGallery = () => {
 
   useEffect(() => {
     fetchData(page);
-  }, [page]);
+  }, [fetchData, page]);
 
   const onRefresh = () => {
+    setisReferesh(true);
     setPage(page + 1);
   };
 
@@ -98,7 +102,7 @@ const ImageGallery = () => {
           renderItem={renderItem}
           keyExtractor={(item, index) => `key-${item.id}`}
           onRefresh={() => onRefresh()}
-          refreshing={loading}
+          refreshing={isRefresh}
         />
       </SafeAreaView>
     </>
