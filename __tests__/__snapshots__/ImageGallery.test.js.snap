@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <Text
+    style={
+      Object {
+        "color": "black",
+        "fontSize": 30,
+        "marginTop": 50,
+        "textAlign": "center",
+      }
+    }
+  >
+    Image Gallery
+  </Text>,
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "position": "absolute",
+      }
+    }
+  >
+    <RCTScrollView
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={true}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onRefresh={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      refreshControl={
+        <RefreshControlMock
+          onRefresh={[Function]}
+          refreshing={false}
+        />
+      }
+      refreshing={false}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <RCTRefreshControl />
+      <View />
+    </RCTScrollView>
+  </RCTSafeAreaView>,
+]
+`;
+
+exports[`renders the ActivityIndicator component 1`] = `
+<ActivityIndicator
+  animating={true}
+  color="#0000ff"
+  hidesWhenStopped={true}
+  size="large"
+/>
+`;
+
+exports[`renders the FlatList component 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "author": "Alejandro Escamilla",
+        "author_url": "https://unsplash.com/photos/yC-Yzbqy7PY",
+        "filename": "0.jpeg",
+        "format": "jpeg",
+        "height": 3744,
+        "id": 0,
+        "post_url": "https://unsplash.com/photos/yC-Yzbqy7PY",
+        "width": 5616,
+      },
+      Object {
+        "author": "Alejandro Escamilla",
+        "author_url": "https://unsplash.com/photos/LNRyGwIJr5c",
+        "filename": "1.jpeg",
+        "format": "jpeg",
+        "height": 3744,
+        "id": 1,
+        "post_url": "https://unsplash.com/photos/LNRyGwIJr5c",
+        "width": 5616,
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onRefresh={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[Function]}
+      refreshing={true}
+    />
+  }
+  refreshing={true}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <RCTRefreshControl />
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "marginHorizontal": 16,
+            "marginVertical": 8,
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontSize": 20,
+              "marginBottom": 10,
+              "textAlign": "center",
+            }
+          }
+        >
+          Alejandro Escamilla
+        </Text>
+        <Image
+          source={
+            Object {
+              "uri": "https://picsum.photos/200/300?image=0",
+            }
+          }
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 200,
+              "justifyContent": "center",
+              "width": 200,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "marginHorizontal": 16,
+            "marginVertical": 8,
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontSize": 20,
+              "marginBottom": 10,
+              "textAlign": "center",
+            }
+          }
+        >
+          Alejandro Escamilla
+        </Text>
+        <Image
+          source={
+            Object {
+              "uri": "https://picsum.photos/200/300?image=1",
+            }
+          }
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 200,
+              "justifyContent": "center",
+              "width": 200,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
